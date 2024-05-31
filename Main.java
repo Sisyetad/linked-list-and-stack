@@ -1,16 +1,17 @@
 package com.toDoListApp;
-
-import com.toDoListApp.Stack;
-class Main {
+public class Main {
     public static void main(String[] args) {
-
-        Stack stack = new Stack();
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
-        stack.push(40);
-        stack.display();
-        System.out.println(stack.pop());
-        System.out.println(stack.peek());
+        LinkedList list =new LinkedList();
+        list.insertAt(10,1);
+        list.insertAt(20,2);
+        list.insertAt(30,3);
+        list.insertAt(40,4);
+        list.display();
+        list.delete(3);
+        list.display();
+        list.deleteAfterNode(new Node(20));
+        list.display();
+        System.out.println(list.searchNode(new Node(20)));
+        System.out.println(list.searchNode(new Node(30)));
     }
 }
